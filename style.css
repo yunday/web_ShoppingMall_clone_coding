@@ -1,0 +1,24 @@
+body{
+    margin: 0; /* 바디 마진 없애야 여백 없음 */
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 수직적이라 align-items로 해주어야함 */
+    background-color: #fcf1f1;
+    padding: 8px 12px; /* 순서-> 위 양옆*/
+}
+
+.navbar_logo{
+    font-size: 24px;
+}
+
+.navbar_logo i {
+    color: tomato;
+}
