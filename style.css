@@ -1,24 +1,98 @@
+:root{ /* 변수로 지정해서 할 수 있음 */
+    --text-color: rgb(0, 0, 0);
+    --background-color: #fcf1f1;
+    --accent-color: #c074ff;
+}
+
 body{
     margin: 0; /* 바디 마진 없애야 여백 없음 */
+    font-family: 'Do Hyeon', sans-serif;
 }
 
 a{
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: var(--text-color);
 }
 
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center; /* 수직적이라 align-items로 해주어야함 */
-    background-color: #fcf1f1;
+    background-color: var(--background-color);
     padding: 8px 12px; /* 순서-> 위 양옆*/
 }
 
 .navbar_logo{
     font-size: 24px;
+    color: var(--accent-color);
 }
 
-.navbar_logo i {
-    color: tomato;
+.navbar_menu{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_menu li{
+    /* margin은 클릭 범위가 좁아짐 */
+    /* padding은 클릭 범위가 넓어짐 */
+    padding: 8px 12px;
+}
+
+.navbar_menu li:hover{ /* hover -> 사용자의 커서가 요소에 올라가 있을 때 */
+    background-color: var(--background-color);
+    border-radius: 4px;
+}
+
+.navbar_icons{
+    list-style: none;
+    color: var(--accent-color);
+    display: flex;
+    padding-left: 0;
+}
+
+.navbar_icons li{  /* icons 클래스의 li속성 */
+    padding: 8px 12px;
+}
+
+.navbar_toogleBtn{
+    display: none;  /* 현재 디스플레이에 안보이게 함 */
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: var(--accent-color);
+}
+
+/* 레이아웃 반응형으로 만들기 -> query 이용 */
+@media screen and (max-width: 768px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start; /* 왼쪽 정렬 */
+        padding: 8px 24px;
+    }
+    
+    .navbar_menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar_menu li{
+        width: 100%;
+        text-align: center;
+    }
+    .navbar_icons{
+        /* 얘는 row로 돼있으므로 밑에꺼 사용해야함 */
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar_toogleBtn{
+        display: block;
+    }
+
+    .navbar_menu.active,
+    .navbar_icons.active{
+        display: flex;
+    }
 }

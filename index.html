@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" 
+        rel="stylesheet"
+    />
     <script 
         defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" 
         integrity="sha384-3Nqiqht3ZZEO8FKj7GR1upiI385J92VwWNLj+FqHxtLYxd9l+WYpeqSOrLh0T12c" 
         crossorigin="anonymous">
     </script>
+    <script src="main.js" defer></script>
     <title>gogosing</title>
 </head>
 <body>
@@ -19,17 +24,20 @@
         </div>
         <ul class="navbar_menu">
             <!-- (li>a)*5 li안에 a태그가 5개 / 괄호는 그룹화 함 -->
-            <li><a href="">Home</a></li>
-            <li><a href="">Gallery</a></li>
-            <li><a href="">Weddings</a></li>
-            <li><a href="">FAQ</a></li>
-            <li><a href="">Bookings</a></li>
+            <li><a href="">로그인</a></li>
+            <li><a href="">회원가입</a></li>
+            <li><a href="">장바구니</a></li>
+            <li><a href="">주문조회</a></li>
+            <li><a href="">마이페이지</a></li>
         </ul>
-        <ul class="navbar_links">
-            <i class="fab fa-twitter-square"></i>
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-instagram-square"></i>
+        <ul class="navbar_icons">
+            <li><i class="fab fa-twitter-square"></i></li>
+            <li><i class="fab fa-facebook-square"></i></li>
+            <li><i class="fab fa-instagram-square"></i></li>
         </ul>
+        <a href="javascript:;" class="navbar_toogleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
     </nav>
 </body>
 </html>
