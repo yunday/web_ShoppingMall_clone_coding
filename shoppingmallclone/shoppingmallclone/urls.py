@@ -24,5 +24,5 @@ urlpatterns = [
     path('home/', include('shop_main.urls')),
 
     #list app
-    path('list/', include('shop_list.urls')),
+    # path('list/', include('shop_list.urls')),
 ]
