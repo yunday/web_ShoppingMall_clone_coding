@@ -1,0 +1,16 @@
+{% load static %}
+{% block main %}
+
+<body>
+    <div class="col-md-12">
+        <div class="container">
+            {% for list in shop_list %}
+                {{list.title}}<br>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+
+
+{% endblock main %}
